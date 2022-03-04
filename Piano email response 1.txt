@@ -1,0 +1,71 @@
+Client:
+
+From: john.doe@anenduser.com
+To: support@piano.io
+Subject: Piano ID login
+
+Hello Piano,
+
+I am struggling to understand how to create a login button on my website. Can you send me a code snippet for
+me to use that shows how to have a login button?
+
+Regards,
+John
+
+-------------------------------------------------------------------------------------------------------------
+
+Response:
+
+From: support@piano.io
+To: john.doe@anenduser.com
+Subject: Piano ID Login
+
+Hello John,
+
+To implement Piano into your front end app, you need to first initialize the tp global variable like this:
+
+	tp = window["tp"] || [];
+
+
+After that, you need to set the setUsePianoIdUserProvider property as true:
+
+	tp.push(["setUsePianoIdUserProvider", true ]);
+
+
+Then you only need to define the properties of the init function and call it with tp.pianoId.show()
+
+Piano will automatically check if the user is logged in, and if not it will automatically present the appropiate
+login or registration form.
+
+
+Adding this in the context of a HTML template, the example would look like this:
+
+	<input type="button" onclick="loginPiano();" value="Login">
+    <script>
+        function loginPiano() {
+            tp = window["tp"] || [];
+            tp.push(["setUsePianoIdUserProvider", true ]);
+            tp.push(["init", function() {
+                tp.pianoId.init({
+                    displayMode: "modal",
+                    containerSelector: "#login-form",
+                    loggedIn: function(data) {
+                        console.log("user ", data.user, " logged in with token", data.token);
+                    },
+                    loggedOut: function() {
+                        console.log("user logged out");
+                    }
+                });
+                tp.pianoId.show();
+            }]);
+        }
+    </script>
+
+
+You can get more information regarding Piano ID from here:
+
+	https://docs.piano.io/piano-id-overview/#idinitialization
+
+
+Regards,
+Piano Team

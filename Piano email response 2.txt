@@ -1,0 +1,31 @@
+Client:
+
+From: keyuser@somepublisher.com
+To: support@piano.io
+Fwd: Not able to sign up
+
+Our team has received a ticket from an individual who is having trouble setting up his digital access account.
+When he tries to log in, he gets the message “You have successfully logged in”
+But then when he opens an article he gets the message asking him to purchase a subscription.
+
+Here is his contact information: Ryan Kanp - Enduser@anenduser.com
+
+The Piano dashboard confirms his account, but there are no payment details.
+Can you please look into Mr. Kanp’s account and help us resolve this issue?
+
+-------------------------------------------------------------------------------------------------------------
+
+Response:
+
+From: support@piano.io
+To: keyuser@somepublisher.com
+Subject: Not able to sign up
+
+Hello,
+
+We found that the user Ryan Kanp is currently inactive and that it has no active suscriptions at the moment.
+
+Please activate his account and enable a suscription.
+
+Regards,
+Piano Team
