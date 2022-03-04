@@ -34,12 +34,10 @@ def merge_files(file_a, file_b):
         row_b = rows_b[i]
 
         rows.append([row_a[0], row_a[1], row_b[1], row_b[2]])
-    
-    sorted_rows = sorted(rows, key=lambda row: row[0], reverse=False)
 
     return {
         'headers': headers,
-        'rows': sorted_rows
+        'rows': rows
     }
 
 
